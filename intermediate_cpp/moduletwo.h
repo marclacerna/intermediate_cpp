@@ -86,8 +86,12 @@ class Course
 {
 	public:
 		Course();
-		Course(Student&, Student&, Student&, Teacher&);
+		Course(Student *students, Teacher *teacher);
 		~Course();
+	private:
+		char *_CourseName;
+
+
 
 
 };

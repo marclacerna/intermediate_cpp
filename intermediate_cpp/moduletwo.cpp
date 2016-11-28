@@ -1,7 +1,9 @@
 #include "moduletwo.h"
 #include <iostream>
 
-Teacher::Teacher()
+
+Teacher::Teacher() :
+	_FirstName("fname"), _LastName("lname"), _Age(0), _Address(0), _City("city"), _Phone(000000000)
 {
 }
 
@@ -15,8 +17,7 @@ Teacher::Teacher(char * _FirstName, char * _LastName, int _Age, int _Address, ch
 	this->_Phone = _Phone;
 }
 
-Teacher::~Teacher() :
-	_FirstName("fname"), _LastName("lname"), _Age(0), _Address(0), _City("city"), _Phone(000000000)
+Teacher::~Teacher()
 {
 }
 
@@ -58,12 +59,21 @@ Course::Course()
 {
 }
 
-Course::Course(Student&, Student&, Student&, Teacher&)
+Course::Course(Student *students, Teacher *teacher)
 {
-	Student student[3] = {
-		this-> 
+	for (int i = 0; i < 3; i++)
+	{
+		(students + i)->FName();
+		(students + i)->LName();
+		(students + i)->Age();
+		(students + i)->City();
+		(students + i)->Address();
+		(students + i)->Phone();
 	}
+
+	teacher->FName;
 }
+
 
 Course::~Course()
 {
