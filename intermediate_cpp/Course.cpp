@@ -37,8 +37,9 @@ void Course::AddPerson(Teacher &teacher)
 
 void Course::displayStudents() const
 {
+// ???
 	for (int i = 0; i < _studentCount; i++)
 	{
-		std::cout << _arrayOfStudents[i];
+		std::cout << _arrayOfStudents->Name << std::endl;
 	}
 }
