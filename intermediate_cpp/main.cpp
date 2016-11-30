@@ -15,12 +15,13 @@ int main(int argc, char *argv[])
 	Teacher teach("drblu", 99, "koala101");
 	teach.GradeStudent();
 
-	Course Period1("Math", 2);
+	Course Period1("Math");
 	Period1.AddPerson(student1);
 	Period1.AddPerson(student2);
 	Period1.AddPerson(teach1);
 	Period1.AddPerson(teach);
 	Period1.displayCourse();
 	Period1.displayStudents();
+	Period1.displayTeachers();
 	
 }

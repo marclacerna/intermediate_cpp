@@ -5,19 +5,22 @@
 class Course
 {
 private:
-	Student *_arrayOfStudents;
 	int _studentCount;
-	Teacher *_arrayOfTeachers;
 	int _teacherCount;
+
+protected:
+	//c++ has static array, need to reallocate if want to resize. std::vector is recommended
+	Student _arrayOfStudents[3];
+	Teacher _arrayOfTeachers[3];
 	char *_course;
 public:
 	Course();
-	Course(char *course, int noStudents);
+	Course(char *course);
 	~Course();
 	void AddPerson(Student &student);
 	void AddPerson(Teacher &teacher);
 	
 	char *displayCourse() const { return _course; }
-	void displayStudents() const;
-	//void displayTeachers() const;
+	void displayStudents();
+	void displayTeachers();
 };
