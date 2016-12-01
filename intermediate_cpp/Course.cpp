@@ -11,7 +11,7 @@ Course::Course()
 }
 
 Course::Course(char *course)
-	:_studentCount(0), _teacherCount(0)
+	: _studentCount(0), _teacherCount(0)
 {
 	this->_course = course;
 }
@@ -51,3 +51,35 @@ void Course::displayTeachers()
 		std::cout << " ,Age: " << i.Age() << std::endl;
 	}
 }
+
+
+#pragma region dynamic array
+
+Course::Course(char * course, int size)
+	: _studentCount(0), _teacherCount(0)
+{
+	this->_course = course;
+	this->_dynArrOfStudents = new Student[size];
+}
+
+void Course::dynAddPerson(Student & student)
+{
+	_dynArrOfStudents[_studentCount] = student;
+	_studentCount += 1;
+}
+
+void Course::displayDyanmicStudents(int size)
+{
+	std::cout << "DYNAMIC STUDENTS" << std::endl;
+	for (int i = 0; i < size; i++)
+	{
+		std::cout << "Name: " << _dynArrOfStudents[i].Name();
+		std::cout << " ,Age: " << _dynArrOfStudents[i].Age() << std::endl;
+	}
+
+	delete[] _dynArrOfStudents;
+}
+
+#pragma endregion
+
+

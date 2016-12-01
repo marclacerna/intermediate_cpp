@@ -23,5 +23,16 @@ int main(int argc, char *argv[])
 	Period1.displayCourse();
 	Period1.displayStudents();
 	Period1.displayTeachers();
+
+
+	//dynamic array initialization
+	int size = 2;
+	Course Period2("Science", size);
+	Period2.dynAddPerson(student1);
+	Period2.dynAddPerson(student2);
+
+	Period2.displayCourse();
+	Period2.displayDyanmicStudents(size);
+	
 	
 }
