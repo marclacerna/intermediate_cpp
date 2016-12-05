@@ -26,6 +26,7 @@ public:
 	void displayStudents();
 	void displayTeachers();
 
+	// dynamic array constructor and methods
 	Course(char *course, int size);
 	void dynAddPerson(Student &student);
 	void displayDyanmicStudents(int size);

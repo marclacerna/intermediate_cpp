@@ -1,9 +1,6 @@
 #include "Course.h"
 #include <iostream>
 
-// remeber to add a "delete" 
-// how to print array of objs
-
 
 Course::Course()
 	:_studentCount(0),  _teacherCount(0)
@@ -53,7 +50,7 @@ void Course::displayTeachers()
 }
 
 
-#pragma region dynamic array
+#pragma region dynamic array (create, display and deletion)
 
 Course::Course(char * course, int size)
 	: _studentCount(0), _teacherCount(0)

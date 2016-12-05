@@ -5,6 +5,8 @@ class Person
 {
 	private:
 		char *_Name;
+	protected:
+		char *_otherName;
 		int _Age;
 	public:
 		Person();
